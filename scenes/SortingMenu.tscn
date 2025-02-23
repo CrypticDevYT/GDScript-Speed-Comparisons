@@ -1,87 +1,181 @@
-[gd_scene load_steps=2 format=3 uid="uid://do6dafatqw5ij"]
+[gd_scene load_steps=2 format=1]
 
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_j48ol"]
+[ext_resource path="res://Scripts/Sortingmenu.gd" type="Script" id=1]
 
-[node name="Sorting" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_j48ol")
+[node name="Sortingmenu" type="Control"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+script/script = ExtResource( 1 )
+__meta__ = { "__editor_plugin_screen__":"Script" }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
+
+margin/top = 99.0
+margin/right = 1152.0
+margin/bottom = 549.0
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
+
+margin/left = 71.0
+margin/right = 277.0
+margin/bottom = 450.0
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
 alignment = 1
 
 [node name="BubbleSortButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+
+margin/top = 178.0
+margin/right = 206.0
+margin/bottom = 197.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
 text = "Bubble Sort"
+flat = false
 
 [node name="QuickSortButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+
+margin/top = 201.0
+margin/right = 206.0
+margin/bottom = 220.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
 text = "Quick Sort"
+flat = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+
+margin/top = 224.0
+margin/right = 206.0
+margin/bottom = 247.0
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+alignment = 0
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
+
+margin/top = 5.0
+margin/right = 61.0
+margin/bottom = 18.0
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
 text = "Elements: "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(50.75, 0)
-layout_mode = 2
+
+visibility/opacity = 0.09
+margin/left = 65.0
+margin/right = 68.0
+margin/bottom = 23.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 
 [node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-max_value = 100000.0
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="StaticTypeCheck" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-text = "Statically Typed?          "
+margin/left = 72.0
+margin/right = 134.0
+margin/bottom = 23.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+range/min = 0.0
+range/max = 65535.0
+range/step = 1.0
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+editable = true
+prefix = ""
+suffix = ""
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
+
+margin/top = 251.0
+margin/right = 206.0
+margin/bottom = 272.0
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+alignment = 0
 
 [node name="TakeAvgCheck" type="CheckButton" parent="VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
+
+margin/right = 203.0
+margin/bottom = 21.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = true
 text = "Take Average of 5        "
+flat = false
+align = 0
 
 [node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(800, 450)
-layout_mode = 2
-placeholder_text = "Time Output"
-editable = false
+
+margin/left = 281.0
+margin/right = 1081.0
+margin/bottom = 450.0
+rect/min_size = Vector2( 800, 450 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
 
 [node name="clearButton" type="Button" parent="VBoxContainer/HBoxContainer/TextEdit"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -49.0
-offset_bottom = 31.0
-grow_horizontal = 0
-text = "Clear"
 
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/BubbleSortButton" to="." method="_on_bubble_sort_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/QuickSortButton" to="." method="_on_quick_sort_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/TextEdit/clearButton" to="." method="_on_clear_button_pressed"]
+anchor/left = 1
+anchor/right = 1
+margin/left = 42.0
+margin/top = 1.0
+margin/right = 1.0
+margin/bottom = 20.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+toggle_mode = false
+text = "Clear"
+flat = false
+__meta__ = { "__editor_plugin_screen__":"2D" }
+
+
